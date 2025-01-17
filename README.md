@@ -1,4 +1,4 @@
-# e_commerece_mobile_app
+# e_commerce_ostad
 
 A new Flutter project.
 
