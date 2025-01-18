@@ -43,3 +43,27 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# macOS metadata files (common on external drives)
+._*
+
+# Flutter-specific macOS build files
+macos/Flutter/Flutter.podspec
+macos/Flutter/ephemeral/
+macos/.symlinks/
+
+# CocoaPods (macOS dependencies)
+macos/Pods/
+macos/*.xcodeproj/project.xcworkspace/
+
+# macOS build and temp files
+macos/build/
+macos/.flutter-plugins
+macos/.flutter-plugins-dependencies
