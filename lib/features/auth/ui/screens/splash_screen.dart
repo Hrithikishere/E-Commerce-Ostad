@@ -1,23 +1,42 @@
 import 'package:e_commerce_ostad/app/assets_path.dart';
+import 'package:e_commerce_ostad/features/auth/ui/screens/email_verification_screen.dart';
+import 'package:e_commerce_ostad/features/auth/ui/widgets/app_logo_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  initState(){
+    super.initState();
+    _moveToNextScreen();
+  }
+
+  Future<void> _moveToNextScreen() async {
+    await Future.delayed(const Duration(seconds: 2),);
+    Navigator.pushNamedAndRemoveUntil(context, EmailVerification.name, (predicate)=>false);
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Column(
           children: [
-            const Spacer(),
-            SvgPicture.asset(AssetsPath.appLogoSvg, width: 100,),
-            const Spacer(),
-            const CircularProgressIndicator(),
-            const SizedBox(height: 20,),
-            const Text('Version 1.0'),
-            const SizedBox(height: 40,),
+            Spacer(),
+            AppLogoWidget(),
+            Spacer(),
+            CircularProgressIndicator(),
+            SizedBox(height: 20,),
+            Text('Version 1.0'),
+            SizedBox(height: 40,),
           ],
         ),
       ),
