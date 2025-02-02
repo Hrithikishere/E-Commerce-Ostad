@@ -1,4 +1,5 @@
 import 'package:e_commerce_ostad/app/app_theme_data.dart';
+import 'package:e_commerce_ostad/features/auth/ui/screens/complete_profile_screen.dart';
 import 'package:e_commerce_ostad/features/auth/ui/screens/email_verification_screen.dart';
 import 'package:e_commerce_ostad/features/auth/ui/screens/otp_verification_screen.dart';
 import 'package:e_commerce_ostad/features/auth/ui/screens/splash_screen.dart';
@@ -18,7 +19,7 @@ class CraftyBay extends StatelessWidget {
         '/': (context) => const SplashScreen(),
         EmailVerification.name: (context)=> const EmailVerification(),
         OTPVerification.name: (context)=> const OTPVerification(),
-
+        CompleteProfile.name: (context)=> const CompleteProfile(),
       }
     );
   }
