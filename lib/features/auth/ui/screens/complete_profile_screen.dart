@@ -1,5 +1,6 @@
 import 'package:e_commerce_ostad/features/auth/ui/screens/otp_verification_screen.dart';
 import 'package:e_commerce_ostad/features/auth/ui/widgets/app_logo_widget.dart';
+import 'package:e_commerce_ostad/features/common/ui/screens/main_bottom_nav_screen.dart';
 import 'package:flutter/material.dart';
 
 class CompleteProfile extends StatefulWidget {
@@ -53,7 +54,7 @@ class _CompleteProfileState extends State<CompleteProfile> {
               ElevatedButton(
                 onPressed: () {
                   // if(_formKey.currentState!.validate()){}
-                  // Navigator.pushReplacementNamed(context, CompleteProfile.name);
+                  // Navigator.pushReplacementNamed(context, MainBottomNavScreen.name);
                 },
                 child: const Text('Complete'),
               ),
